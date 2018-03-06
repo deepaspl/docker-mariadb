@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  db:
+    image: dev:mariadb
+    container_name: db
+    ports: 
+      - 3307:3306
+    env_file: 
+      - conf-db.env
+    volumes:
+      - ./mariadb/data_volume:/var/lib/mysql
+
+  phpmyadmin:
+    image: dev:phpmyadmin
+    container_name: phpmyadmin
+    ports:
+     - 8080:80
+

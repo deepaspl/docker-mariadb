@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker build -t dev:mariadb -f mariadb/Dockerfile .
+docker build -t dev:phpmyadmin -f phpmyadmin/Dockerfile .
